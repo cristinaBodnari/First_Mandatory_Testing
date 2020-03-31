@@ -15,14 +15,14 @@ class Purchase:
         return self.price
 
     def increment_phone_Lines(self):
-        self.price +=150
         if self.phone_Lines < 8:
+            self.price += 150
             self.phone_Lines +=1
         return self.price
 
     def decrement_phone_Lines(self):
-        self.price -=150
         if self.phone_Lines >0:
+            self.price -= 150
             self.phone_Lines -=1
         return self.price
 
