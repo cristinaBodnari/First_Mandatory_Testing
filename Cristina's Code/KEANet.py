@@ -6,7 +6,7 @@ class Purchase:
         self.cell_Phones = ['Motorola G99', 'iPhone 99', 'Samsung Galaxy 99', 'Sony Xperia 99', 'Huawei 99']
         self.price = 0
 
-    def internet_Connection(self, user_Choices):
+    def internet_Connections(self, user_Choices):
         if user_Choices:
             self.price += 200
         else:
