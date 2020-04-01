@@ -115,13 +115,13 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
         self.assertEqual(test.buy(),"Please add something to the list" )
 
     #Test if the correct output is displayed when one is selected
-    def test_list_of_selected_phones_buy(self):
+    def test_list_of_selected_phones_buy1(self):
         test = Purchase()
         test.select_cell_phone("Motorola G99")
         self.assertEqual(test.buy(),"Motorola G99 " )
 
     #Test if the correct output is displayed when we select and deselect a phone
-    def test_list_of_selected_phones_buy(self):
+    def test_list_of_selected_phones_buy2(self):
         test = Purchase()
         test.select_cell_phone("Motorola G99")
         test.select_cell_phone("Motorola G99")
