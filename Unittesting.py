@@ -4,14 +4,16 @@ import unittest
 
 class Increment_Decrement_UnitTesting(unittest.TestCase):
     # Testing the internet conection function
+    # If the function receive True the price will be increased by 200
     def test_select_internet_connection1(self):
         test = Purchase()
         self.assertEqual(test.internet_Connections(True), 200)
-
+    # If the function receives False the price will be decreased by 200
     def test_select_internet_connection2(self):
         test = Purchase()
         self.assertEqual(test.internet_Connections(False), -200)
-        
+    
+    # Testing the selection of cellphones, if the function will modify the price correctly according to the cellphone selected    
     def test_select_cellphone(self):
         test = Purchase()
         self.assertEqual(test.select_cell_phone('Motorola G99'), 800)
@@ -31,7 +33,8 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
     def test_select_cellphone4(self):
         test = Purchase()
         self.assertEqual(test.select_cell_phone('Huawei 99'), 900)
-
+    
+    #Testing the unselect function if it will modify the price according to the cellphone selected
     def test_unselect_cellphone(self):
         test = Purchase()
         self.assertEqual(test.unselect_cell_phone('Motorola G99'), -800)
