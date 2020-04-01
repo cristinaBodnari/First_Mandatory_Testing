@@ -45,21 +45,26 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
 
     # Testing basic functionality of the increment_phone_Lines() function
     #########################################################
+
+    #Test if the correct price is return
     def test_price_after_increment_cell_lines(self):
         test = Purchase()
         self.assertEqual(test.increment_phone_Lines(), 150)
 
+    #Test if the price is stop increasing if the limit of 8 cell lines is reached
     def test_price_max_8_cell_lines(self):
         test = Purchase()
         for i in range(0, 8):
             test.increment_phone_Lines()
         self.assertNotEqual(test.increment_phone_Lines(), 1350)
 
+    #test if phone_lines is corectly increasing when calling the increment_phone_Lines() method
     def test__phone_lines(self):
         test = Purchase()
         test.increment_phone_Lines()
         self.assertEqual(test.phone_Lines, 1)
 
+    ##Test if the phone_lines stops increasing when the limit is reached
     def test_max_8_phone_lines(self):
         test = Purchase()
         for i in range(0, 8):
@@ -69,16 +74,20 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
 
     # Testing basic functionality of the decrement_phone_Lines() function
     #########################################################
+
+    #Test if the function is return the corect price
     def test_price_after_decrement_cell_lines(self):
         test = Purchase()
         test.increment_phone_Lines()
         test.increment_phone_Lines()
         self.assertEqual(test.decrement_phone_Lines(), 150)
 
+    #Test if the function doesn't decrease the price if the function is called with unexisting phone line
     def test_price_min_0_phone_lines(self):
         test = Purchase()
         self.assertNotEqual(test.decrement_phone_Lines(), -150)
 
+    #Test if the function doesn't decrease unexisting phone lines
     def test_min_0_phone_lines(self):
         test = Purchase()
         test.decrement_phone_Lines()
