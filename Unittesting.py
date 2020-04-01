@@ -3,6 +3,11 @@ import unittest
 
 
 class Increment_Decrement_UnitTesting(unittest.TestCase):
+    # Testing the internet conection function
+    def test_select_internet_connection(self):
+        test = Purchase()
+        self.assertEqual(test.internet_Connections(True), 200)
+        
     def test_select_cellphone(self):
         test = Purchase()
         self.assertEqual(test.select_cell_phone('Motorola G99'), 800)
