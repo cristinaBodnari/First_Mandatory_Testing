@@ -35,3 +35,7 @@ jobs:
       run: |
         pip install pytest
         pytest Unittesting.py
+    - name: Create deployabel artifact
+      run: |
+        pip install pyinstaller
+        pyinstaller KEANET.py
