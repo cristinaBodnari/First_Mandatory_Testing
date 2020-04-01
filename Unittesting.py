@@ -5,9 +5,9 @@ import unittest
 class Increment_Decrement_UnitTesting(unittest.TestCase):
     # Testing the internet conection function
     # If the function receive True the price will be increased by 200
-    def test_select_internet_connection1(self):
-        test = Purchase()
-        self.assertEqual(test.internet_Connections(True), 200)
+    def test_select_internet_connection1(self): # Arrange
+        test = Purchase() # Action
+        self.assertEqual(test.internet_Connections(True), 200) # Assort
     # If the function receives False the price will be decreased by 200
     def test_select_internet_connection2(self):
         test = Purchase()
