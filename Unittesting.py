@@ -4,9 +4,13 @@ import unittest
 
 class Increment_Decrement_UnitTesting(unittest.TestCase):
     # Testing the internet conection function
-    def test_select_internet_connection(self):
+    def test_select_internet_connection1(self):
         test = Purchase()
         self.assertEqual(test.internet_Connections(True), 200)
+
+    def test_select_internet_connection2(self):
+        test = Purchase()
+        self.assertEqual(test.internet_Connections(False), 0)
         
     def test_select_cellphone(self):
         test = Purchase()
