@@ -103,4 +103,25 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
         self.assertNotEqual(test.phone_Lines, -1)
     #######################################################
 
-###########
+    #Test Buy Function
+    #######################################################
+
+    #Test if the correct output is displayed when no phone is selected
+    def test_buy_when_no_selected_phone(self):
+        test = Purchase()
+        self.assertEqual(test.buy(),"Please add something to the list" )
+
+    #Test if the correct output is displayed when one is selected
+    def test_list_of_selected_phones_buy(self):
+        test = Purchase()
+        test.select_cell_phone("Motorola G99")
+        self.assertEqual(test.buy(),"Motorola G99 " )
+
+    #Test if the correct output is displayed when we select and deselect a phone
+    def test_list_of_selected_phones_buy(self):
+        test = Purchase()
+        test.select_cell_phone("Motorola G99")
+        test.select_cell_phone("Motorola G99")
+        test.unselect_cell_phone("Motorola G99")
+
+        self.assertEqual(test.buy(),"Motorola G99 " )
