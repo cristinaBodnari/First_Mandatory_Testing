@@ -38,4 +38,4 @@ jobs:
     - name: Create deployabel artifact
       run: |
         pip install pyinstaller
-        pyinstaller KEANET.py
+        pyinstaller KEANet.py
