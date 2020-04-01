@@ -1,4 +1,4 @@
-from CristinaCode.KEANet import Purchase
+from KEANet import Purchase
 import unittest
 
 
