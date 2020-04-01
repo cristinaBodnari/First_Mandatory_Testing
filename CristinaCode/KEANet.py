@@ -9,8 +9,10 @@ class Purchase:
     def internet_Connections(self, user_Choices):
         if user_Choices:
             self.price += 200
+            self.internet_Connection = True
         else:
             self.price -= 200
+            self.internet_Connection = False
 
         return self.price
 
