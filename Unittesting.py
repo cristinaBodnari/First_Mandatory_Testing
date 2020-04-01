@@ -10,7 +10,7 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
 
     def test_select_internet_connection2(self):
         test = Purchase()
-        self.assertEqual(test.internet_Connections(False), 0)
+        self.assertEqual(test.internet_Connections(False), -200)
         
     def test_select_cellphone(self):
         test = Purchase()
