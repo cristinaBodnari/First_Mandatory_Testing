@@ -117,14 +117,14 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
     #Test if the correct output is displayed when one is selected
     def test_list_of_selected_phones_buy(self):
         test = Purchase()
-        test.select_cell_phone("Motorola G99")
-        self.assertEqual(test.buy(),"Motorola G99 " )
+        test.select_cell_phone(test.cell_Phones[1])
+        self.assertEqual(test.buy(),test.cell_Phones[1])
 
     #Test if the correct output is displayed when we select and deselect a phone
     def test_list_of_selected_phones_buy(self):
         test = Purchase()
-        test.select_cell_phone("Motorola G99")
-        test.select_cell_phone("Motorola G99")
-        test.unselect_cell_phone("Motorola G99")
+        test.select_cell_phone(test.cell_Phones[1])
+        test.select_cell_phone(test.cell_Phones[1])
+        test.unselect_cell_phone(test.cell_Phones[1])
 
-        self.assertEqual(test.buy(),"Motorola G99 " )
+        self.assertEqual(test.buy(),test.cell_Phones[1]+ " ")
