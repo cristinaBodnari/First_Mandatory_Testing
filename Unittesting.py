@@ -5,9 +5,9 @@ import unittest
 class Increment_Decrement_UnitTesting(unittest.TestCase):
     # Testing the internet conection function
     # If the function receive True the price will be increased by 200
-    def test_select_internet_connection1(self): # Arrange
-        test = Purchase() # Action
-        self.assertEqual(test.internet_Connections(True), 200) # Assort
+    def test_select_internet_connection1(self):
+        test = Purchase()
+        self.assertEqual(test.internet_Connections(True), 200)
     # If the function receives False the price will be decreased by 200
     def test_select_internet_connection2(self):
         test = Purchase()
@@ -115,24 +115,16 @@ class Increment_Decrement_UnitTesting(unittest.TestCase):
         self.assertEqual(test.buy(),"Please add something to the list" )
 
     #Test if the correct output is displayed when one is selected
-    def test_list_of_selected_phones_buy1(self):
+    def test_list_of_selected_phones_buy(self):
         test = Purchase()
-        test.select_cell_phone(test.cell_Phones[1])
-        self.assertEqual(test.buy(),test.cell_Phones[1])
-
-    #Test if the correct output is displayed when we select and deselect a phone
-    def test_list_of_selected_phones_buy2(self):
-        test = Purchase()
-        test.select_cell_phone(test.cell_Phones[1])
-        test.select_cell_phone(test.cell_Phones[1])
-        test.unselect_cell_phone(test.cell_Phones[1])
-
-<<<<<<< HEAD
-        self.assertEqual(test.buy(),test.cell_Phones[1]+ " ")
-=======
+        test.select_cell_phone("Motorola G99")
         self.assertEqual(test.buy(),"Motorola G99 " )
 
-##############################
+    #Test if the correct output is displayed when we select and deselect a phone
+    def test_list_of_selected_phones_buy(self):
+        test = Purchase()
+        test.select_cell_phone("Motorola G99")
+        test.select_cell_phone("Motorola G99")
+        test.unselect_cell_phone("Motorola G99")
 
-#sdfasdfasfdasdfasd
->>>>>>> 95f4556cc3abe0a318a56a959e1a5cbfb718d990
+        self.assertEqual(test.buy(),"Motorola G99 " )
